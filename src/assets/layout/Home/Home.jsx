@@ -1,9 +1,9 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
 import "./Home.css";
 import Banner from "../../components/banner/Banner";
 import TopNav from "../../components/topNav/TopNav";
 import MarqueeChef from "../../components/marqueeChef/MarqueeChef";
+import ChefInfo from "../../components/chefInfo/ChefInfo";
 
 const Home = () => {
 	return (
@@ -15,7 +15,9 @@ const Home = () => {
 			<section className="chef-marquee">
 				<MarqueeChef></MarqueeChef>
 			</section>
-			<Outlet></Outlet>
+			<section>
+				<ChefInfo></ChefInfo>
+			</section>
 		</div>
 	);
 };
