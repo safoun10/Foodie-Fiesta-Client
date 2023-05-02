@@ -1,0 +1,12 @@
+.marquee-body{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title-box{
+    border-right: 5px solid white ;
+}
+
+.padding-lot{
+    padding: 100px 0 50px 0 !important;
+}

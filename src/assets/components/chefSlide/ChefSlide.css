@@ -1,0 +1,15 @@
+.img-chef{
+    width: auto;
+    height: 400px !important;
+    border: 5px solid white;
+    transition: 1s;
+}
+.img-chef:hover{
+    box-shadow: 5px 5px #fcfcfc73;
+    border: 4px solid white;
+}
+
+.chef-box{
+    border: 5px solid white;
+    padding: 20px !important;
+}

@@ -17,3 +17,8 @@
     background-color: var(--color-one) !important;
     color: white !important;
 }
+
+.chef-marquee {
+    background-color: var(--color-one);
+    color: white;
+}
