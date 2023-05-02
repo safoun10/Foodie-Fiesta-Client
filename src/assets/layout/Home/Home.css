@@ -1,19 +1,18 @@
-.bg-home{
-    background-image: url(../../images/brooke-lark-wMzx2nBdeng-unsplash.jpg);
+.bg-home {
     max-width: 100vw;
-    min-height: auto;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 400px;
+    min-height: 100vh;
     padding: 0 0 70px 0;
 }
 
-.title-text{
+.title-text {
     color: var(--color-one);
 }
 
-.btn-blog{
+.title-text:hover {
+    color: var(--color-one);
+}
+
+.btn-blog {
     padding: 10px 100px !important;
     background-color: var(--color-one) !important;
     color: white !important;

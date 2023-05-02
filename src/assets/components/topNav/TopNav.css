@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap');
 
-.sticky{
+.sticky {
     position: sticky;
     top: 0px;
 }
 
-.text-dance{
+.text-dance {
     font-family: 'Dancing Script', cursive;
 }
