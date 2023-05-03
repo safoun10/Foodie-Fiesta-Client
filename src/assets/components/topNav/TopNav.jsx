@@ -2,8 +2,11 @@ import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./TopNav.css";
 import { BsPersonCircle } from "react-icons/bs";
+import { AuthContext } from "../../../authProvider/AuthProvider";
 
 const TopNav = () => {
+
+	const {user} = useContext(AuthContext);
 
 	return (
 		<div className="sticky">

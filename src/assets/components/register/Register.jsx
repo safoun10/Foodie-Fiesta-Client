@@ -1,17 +1,56 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../authProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Register = () => {
+	const { createUser } = useContext(AuthContext);
+	const [err, setErr] = useState("");
+
+	const errorPop = (message) => {
+		toast.error(message);
+	};
+
+	const handleRegister = (event) => {
+		event.preventDefault();
+
+		const form = event.target;
+		const email = form.email.value;
+		const url = form.url.value;
+		const text = form.text.value;
+		const password = form.password.value;
+
+		if (password.length < 6) {
+			setErr("Password must be 6 characters or more ...");
+			toast.error(err);
+			return;
+		} else {
+			createUser(email, password)
+				.then((res) => {
+					toast("Arigato gozaimasu !!");
+					form.reset();
+					return;
+				})
+				.catch((error) => {
+					setErr(error.message);
+					const errorMessage = err;
+					errorPop(err);
+				});
+		}
+	};
+
 	return (
 		<div>
-			<form className="login-form col-11 col-sm-10 col-md-8 mx-auto py-5 px-4">
+			<div className="login-form col-11 col-sm-10 col-md-8 mx-auto py-5 px-4">
 				<div className="display-6 fw-bold text-center pb-5 title-text">
 					Register your account
 				</div>
 				<hr />
-				<form className="mt-5">
+				<form onSubmit={handleRegister} className="mt-5">
 					<div>
-						<div className="fs-5 fw-bold mb-3 title-text">Your Name</div>
+						<div className="fs-5 fw-bold mb-3 title-text">
+							Your Name
+						</div>
 						<div>
 							<input
 								className="input-field"
@@ -23,7 +62,9 @@ const Register = () => {
 						</div>
 					</div>
 					<div>
-						<div className="fs-5 fw-bold mb-3 title-text">Photo URL</div>
+						<div className="fs-5 fw-bold mb-3 title-text">
+							Photo URL
+						</div>
 						<div>
 							<input
 								className="input-field"
@@ -35,7 +76,9 @@ const Register = () => {
 						</div>
 					</div>
 					<div>
-						<div className="fs-5 fw-bold mb-3 title-text">Email address</div>
+						<div className="fs-5 fw-bold mb-3 title-text">
+							Email address
+						</div>
 						<div>
 							<input
 								className="input-field"
@@ -43,11 +86,14 @@ const Register = () => {
 								type="email"
 								name="email"
 								id="email"
+								required
 							/>
 						</div>
 					</div>
 					<div>
-						<div className="fs-5 fw-bold mb-3 title-text">Password</div>
+						<div className="fs-5 fw-bold mb-3 title-text">
+							Password
+						</div>
 						<div>
 							<input
 								className="input-field"
@@ -55,15 +101,9 @@ const Register = () => {
 								type="password"
 								name="password"
 								id="password"
+								required
 							/>
 						</div>
-					</div>
-
-					<div className="d-flex align-items-center text-secondary fw-bold">
-						<div>
-							<input className="me-2" type="checkbox" />
-						</div>
-						<div>Accept Terms And Conditions</div>
 					</div>
 
 					<div>
@@ -85,7 +125,7 @@ const Register = () => {
 						<span> Login</span>
 					</Link>
 				</div>
-			</form>
+			</div>
 		</div>
 	);
 };
