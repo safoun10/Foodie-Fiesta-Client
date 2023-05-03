@@ -48,8 +48,8 @@ const Chef = ({chef}) => {
 						</div>
 					</div>
 					<div className="d-flex flex-column sm-bx w-50 justify-content-center align-items-center">
-						<div>
-							<BsFillEmojiHeartEyesFill className="fs-2"></BsFillEmojiHeartEyesFill>
+						<div className='fs-2'>
+							😮
 						</div>
 						<div className="d-flex">
 							<div className="text-dance fs-5 fw-bold me-2">

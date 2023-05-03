@@ -1,6 +1,6 @@
 import React from 'react';
 import { BsArrowRight } from "react-icons/bs";
-import "./Banner.css"
+import "./Banner.css";
 
 const Banner = () => {
     return (
@@ -22,7 +22,10 @@ const Banner = () => {
 					</div>
 				</div>
 				<div className="col-11 col-md-4">
-					<img className='img-fluid' src="https://media.istockphoto.com/id/1460293626/photo/sushi-set-of-different-philadelphia-rolls-with-salmon-tuna-eel-in-black-box-in-male-hands.jpg?s=612x612&w=0&k=20&c=-Xo-wujBXdE5VsaDIO4UpW60GgbIRK2BtckscCJc-qA=" />
+					<img
+						className="img-fluid"
+						src="https://media.istockphoto.com/id/521979868/photo/eel-sushi-roll-on-a-plate-with-ginger-wasabi.jpg?s=612x612&w=0&k=20&c=30pSRHkvoMuF5ghM84GWS82ntCaLLHiXjOsBruehQUM="
+					/>
 				</div>
 			</div>
 		</div>
