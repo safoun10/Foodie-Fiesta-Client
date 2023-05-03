@@ -18,7 +18,7 @@ const Chef = ({chef}) => {
 					<div className="text-dance fw-bold display-3 text-center my-2">
 						{chef.name}
 					</div>
-					<div className="d-flex justify-content-center gap-3 align-items-center">
+					<div className="d-flex justify-content-center gap-2 align-items-center">
 						<div>
 							<Rating
 								stop={1}

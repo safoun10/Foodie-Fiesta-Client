@@ -1,0 +1,19 @@
+.login-form {
+    margin: 0 auto;
+    background-color: white;
+    color: #403F3F;
+    margin-bottom: 100px;
+}
+
+.input-field {
+    background-color: rgba(128, 128, 128, 0.188);
+    color: rgb(65, 65, 65);
+    border: none;
+    padding: 12px 25px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.input-field:focus {
+    outline: none;
+}

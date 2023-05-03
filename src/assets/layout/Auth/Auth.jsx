@@ -1,13 +1,14 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import TopNav from '../../components/topNav/TopNav';
 
-const Blog = () => {
+const Auth = () => {
     return (
-        <div className='pb-1'>
+        <div>
             <TopNav></TopNav>
-            <div>sdfvkd dfv</div>
+            <Outlet></Outlet>
         </div>
     );
 };
 
-export default Blog;
+export default Auth;

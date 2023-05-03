@@ -20,7 +20,7 @@ const ChefInfo = () => {
 				Our Head Chefs Are Ready to Serve You
 			</div>
 			<hr />
-			<div className='text-dance fs-4 fw-bold text-center'>
+			<div className='text-dance fs-4 fw-bold text-center mx-1'>
 				Indulge in the exquisite creations of our esteemed head chefs,
 				who possess a wealth of culinary expertise and are poised to
 				satiate your discerning palate. Their masterful techniques and

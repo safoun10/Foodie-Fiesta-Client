@@ -5,7 +5,7 @@
 }
 
 .title-text {
-    color: var(--color-one);
+    color: var(--color-one) !important;
 }
 
 .title-text:hover {
