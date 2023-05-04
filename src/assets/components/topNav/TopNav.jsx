@@ -25,6 +25,7 @@ const TopNav = () => {
 				</div>
 				<div className="col-md-6 col-8 d-flex justify-content-center align-items-center gap-5">
 					<NavLink
+						activeclasslink="active"
 						className="text-decoration-none title-text fw-bold fs-5"
 						to="/home"
 					>
@@ -32,6 +33,7 @@ const TopNav = () => {
 					</NavLink>
 
 					<NavLink
+						activeclasslink="active"
 						className="text-decoration-none title-text fw-bold fs-5"
 						to="/blog"
 					>
@@ -39,6 +41,7 @@ const TopNav = () => {
 					</NavLink>
 
 					<NavLink
+						activeclasslink="active"
 						className="text-decoration-none title-text fw-bold fs-5"
 						to="https://github.com/safoun10"
 						target="_blank"

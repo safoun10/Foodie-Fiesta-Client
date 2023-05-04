@@ -9,3 +9,7 @@
 .text-dance {
     font-family: 'Dancing Script', cursive;
 }
+
+.active{
+    border-bottom: 3px solid #000000a8;
+}
