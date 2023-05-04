@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../../authProvider/AuthProvider";
@@ -7,6 +7,10 @@ import { AuthContext } from "../../../authProvider/AuthProvider";
 const Login = () => {
 	const { loginUser } = useContext(AuthContext);
 
+	const navigate = useNavigate();
+	const location = useLocation();
+    const from = location.state?.from?.pathname || "/home";
+	
 	const handleLogin = (event) => {
 		event.preventDefault();
 
@@ -19,6 +23,7 @@ const Login = () => {
             toast("Okaeri misutā !!");
             toast("Welcome Back !!");
             form.reset();
+			navigate(from , {replace : true})
         })
         .catch(error => {
             toast.error(error.message)

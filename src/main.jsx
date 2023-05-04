@@ -17,6 +17,7 @@ import AuthProvider from "./authProvider/AuthProvider";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import "react-tooltip/dist/react-tooltip.css";
+import PrivateRoute from "./privateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
 	{
@@ -43,7 +44,11 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "blog",
-		element: <Blog></Blog>,
+		element: (
+			<PrivateRoute>
+				<Blog></Blog>
+			</PrivateRoute>
+		),
 	},
 
 	{
