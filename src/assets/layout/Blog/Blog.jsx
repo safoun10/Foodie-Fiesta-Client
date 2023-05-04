@@ -7,7 +7,9 @@ const Blog = () => {
     return (
 		<div className="pb-1">
 			<TopNav></TopNav>
-			<div>sdfvkd dfv</div>
+			<section className='mx-auto' style={{maxWidth : "1200px"}}>
+				<div></div>
+			</section>
 			<section className="bg-footer">
 				<Footer></Footer>
 			</section>

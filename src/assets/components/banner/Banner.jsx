@@ -9,7 +9,7 @@ const Banner = () => {
 				className="mx-auto row justify-content-center align-items-center"
 				style={{ maxWidth: "1200px" }}
 			>
-				<div className="col-11 col-md-8 d-flex justify-content-center align-items-center flex-column py-5">
+				<div className="col-11 col-md-8 d-flex justify-content-center align-items-center flex-column py-sm-5 py-2">
 					<div className="w-75 fw-bold mx-auto text-center display-3 pt-5 pb-4 title-text text-center text-dance">
 						" Taste the Authentic Flavors of Japanese Food with Our
 						Chef's Handcrafted Recipes"
@@ -21,7 +21,7 @@ const Banner = () => {
 						</button>
 					</div>
 				</div>
-				<div className="col-11 col-md-4">
+				<div className="col-11 col-md-4 d-flex justify-content-center">
 					<img
 						className="img-fluid"
 						src="https://media.istockphoto.com/id/521979868/photo/eel-sushi-roll-on-a-plate-with-ginger-wasabi.jpg?s=612x612&w=0&k=20&c=30pSRHkvoMuF5ghM84GWS82ntCaLLHiXjOsBruehQUM="

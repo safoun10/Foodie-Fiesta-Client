@@ -45,22 +45,16 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "chef-recipes/:ID",
-		element: <ChefData></ChefData>,
+		element: (
+			<PrivateRoute>
+				<ChefData></ChefData>
+			</PrivateRoute>
+		),
 		loader: ({ params }) => fetch("http://localhost:5000/info"),
-		children: [
-			{
-				path: "*",
-				element: <ErrPage></ErrPage>,
-			}
-		],
 	},
 	{
 		path: "blog",
-		element: (
-			<PrivateRoute>
-				<Blog></Blog>
-			</PrivateRoute>
-		),
+		element: <Blog></Blog>,
 	},
 
 	{

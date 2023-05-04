@@ -13,6 +13,7 @@ const SingleRecipe = ({ recipe }) => {
 
 	return (
 		<div className="row w-100 single-recipe my-5 d-flex justify-content-between align-items-center">
+			<div className="title-text text-dance fs-4">chef special</div>
 			<div className="col-5 mx-auto">
 				<div className="text-center title-text text-dance display-4">
 					{name}
