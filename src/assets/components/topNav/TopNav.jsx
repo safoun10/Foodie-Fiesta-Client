@@ -24,7 +24,7 @@ const TopNav = () => {
 						Foodie Fiesta
 					</Link>
 				</div>
-				<div className="col-md-6 col-8 d-flex justify-content-end align-items-center gap-5">
+				<div className="col-md-6 col-8 d-flex justify-content-center align-items-center gap-5">
 					<NavLink
 						className="text-decoration-none title-text fw-bold fs-5"
 						to="/home"
@@ -37,6 +37,14 @@ const TopNav = () => {
 						to="/blog"
 					>
 						Blog
+					</NavLink>
+
+					<NavLink
+						className="text-decoration-none title-text fw-bold fs-5"
+						to="https://github.com/safoun10"
+						target="_blank"
+					>
+						Contact
 					</NavLink>
 				</div>
 				{user ? (

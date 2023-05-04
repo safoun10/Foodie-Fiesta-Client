@@ -79,7 +79,15 @@ const Footer = () => {
 						Social
 					</div>
 					<div className="d-flex flex-column align-items-center ms-2 py-2">
-						<div className="mb-2">Facebook</div>
+						<div className="mb-2">
+							<a
+								className="text-decoration-none text-white"
+								href="https://www.facebook.com/safoun.10"
+								target="_blank"
+							>
+								Facebook
+							</a>
+						</div>
 						<div className="mb-2">Youtube</div>
 						<div className="mb-2">InstaGram</div>
 					</div>

@@ -1,0 +1,9 @@
+.third-party-auth {
+    background-color: var(--color-one);
+    color: white;
+    border: 3px solid white;
+}
+
+.third-party-auth:hover {
+    border: 3px solid var(--color-one);
+}

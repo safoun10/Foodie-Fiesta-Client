@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../../authProvider/AuthProvider";
+import { BsGithub, BsGoogle } from "react-icons/bs";
 
 const Login = () => {
 	const { loginUser } = useContext(AuthContext);
@@ -48,7 +49,7 @@ const Login = () => {
 							type="email"
 							name="email"
 							id="email"
-                            required
+							required
 						/>
 					</div>
 				</div>
@@ -60,7 +61,7 @@ const Login = () => {
 							type="password"
 							name="password"
 							id="password"
-                            required
+							required
 						/>
 					</div>
 				</div>
@@ -74,6 +75,24 @@ const Login = () => {
 					</button>
 				</div>
 			</form>
+			<div className="mt-5">
+				<hr />
+				<div className="display-5 text-dance my-2 fw-bold text-center">
+					OR
+				</div>
+				<hr />
+				<div>
+					<div className="row">
+						<div className="btn third-party-auth col-11 col-sm-6 mx-auto d-flex justify-content-center align-items-center">
+							Login with <BsGoogle className="ms-2"></BsGoogle>
+						</div>
+						<div className="btn third-party-auth col-11 col-sm-6 mx-auto d-flex justify-content-center align-items-center">
+							Login with <BsGithub className="ms-2"></BsGithub>
+						</div>
+					</div>
+				</div>
+				<hr />
+			</div>
 
 			<div className="text-center mt-4 title-text fw-bold">
 				Don't Have An Account ?
