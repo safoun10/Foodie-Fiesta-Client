@@ -7,7 +7,6 @@ import { Tooltip } from "react-tooltip";
 
 const TopNav = () => {
 	const { user, logout } = useContext(AuthContext);
-	console.log(user);
 
 	const signOut = () => {
 		logout();

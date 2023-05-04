@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom';
 
 const Chef = ({chef}) => {
 
-    const { name, Image, experience, recipes, likes } = chef;
+    const { id , name, Image, experience, recipes, likes } = chef;
+
+	// console.log(id);
 
     return (
 		<div className="col-12 col-md-6 mx-auto chef-boxs row align-items-center w-100 card-bottom-20 py-5">
@@ -48,9 +50,7 @@ const Chef = ({chef}) => {
 						</div>
 					</div>
 					<div className="d-flex flex-column sm-bx w-50 justify-content-center align-items-center">
-						<div className='fs-2'>
-							😮
-						</div>
+						<div className="fs-2">😮</div>
 						<div className="d-flex">
 							<div className="text-dance fs-5 fw-bold me-2">
 								{experience}
@@ -61,9 +61,12 @@ const Chef = ({chef}) => {
 						</div>
 					</div>
 				</div>
-				<Link className='text-decoration-none'>
+				<Link
+					className="text-decoration-none"
+					to={`/chef-recipes/${id}`}
+				>
 					<div className="fs-4 text-center btn-chef w-100 text-dance title-text d-flex justify-content-center align-items-center ">
-						<div>View Recipes</div>
+						View Recipes
 						<div>
 							<BsArrowRight></BsArrowRight>
 						</div>

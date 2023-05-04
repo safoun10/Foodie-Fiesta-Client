@@ -18,6 +18,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import "react-tooltip/dist/react-tooltip.css";
 import PrivateRoute from "./privateRoute/PrivateRoute";
+import ChefData from "./assets/components/chefData/ChefData";
 
 const router = createBrowserRouter([
 	{
@@ -41,6 +42,11 @@ const router = createBrowserRouter([
 	{
 		path: "home",
 		element: <Home></Home>,
+	},
+	{
+		path: "chef-recipes/:ID",
+		element: <ChefData></ChefData>,
+		loader: ({params}) => fetch("http://localhost:5000/info"),
 	},
 	{
 		path: "blog",

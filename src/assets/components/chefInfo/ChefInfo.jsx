@@ -12,8 +12,6 @@ const ChefInfo = () => {
         .then(data => setInfo(data))
     } , [])
 
-    console.log(info);
-
     return (
 		<div className="chef-info title-text">
 			<div className="text-dance display-1 text-center">
