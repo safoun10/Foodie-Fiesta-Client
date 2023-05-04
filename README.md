@@ -1,4 +1,4 @@
-# Foodie Fiesta
+<!-- # Foodie Fiesta
 Firebase Live site link : [Foodie Fiesta](https://foodie-fiesta-449d3.web.app/home)
 <hr/>
 
@@ -12,4 +12,4 @@ Firebase Live site link : [Foodie Fiesta](https://foodie-fiesta-449d3.web.app/ho
 - 404 page
 - Blog page with answering questions
 - Footer
-- Page name displayed on the banner
+- Page name displayed on the banner -->
