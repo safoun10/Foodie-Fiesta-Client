@@ -7,7 +7,7 @@ const MarqueeChef = () => {
 	const [chefs, setChefs] = useState([]);
 
 	useEffect(() => {
-		fetch("http://localhost:5000/chefs")
+		fetch("https://chef-recipe-hunter-server-safoun10.vercel.app/chefs")
 			.then((res) => res.json())
 			.then((data) => setChefs(data));
 	}, []);
@@ -20,7 +20,9 @@ const MarqueeChef = () => {
 					<span className="text-dance">World Class</span>
 					<br /> Chefs
 				</div>
-				<div className="text-dance display-1 text-center">Born To Cook</div>
+				<div className="text-dance display-1 text-center">
+					Born To Cook
+				</div>
 			</div>
 			<Marquee speed={80}>
 				{chefs.map((chef) => (

@@ -50,7 +50,8 @@ const router = createBrowserRouter([
 				<ChefData></ChefData>
 			</PrivateRoute>
 		),
-		loader: ({ params }) => fetch("http://localhost:5000/info"),
+		loader: ({ params }) =>
+			fetch("https://chef-recipe-hunter-server-safoun10.vercel.app/info"),
 	},
 	{
 		path: "blog",
