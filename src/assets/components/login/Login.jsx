@@ -4,14 +4,16 @@ import "./Login.css";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../../authProvider/AuthProvider";
 import { BsGithub, BsGoogle } from "react-icons/bs";
+import { getAuth, signInWithPopup } from "firebase/auth";
 
+const auth = getAuth();
 const Login = () => {
-	const { loginUser } = useContext(AuthContext);
+	const { loginUser , GoogleProvider } = useContext(AuthContext);
 
 	const navigate = useNavigate();
 	const location = useLocation();
-    const from = location.state?.from?.pathname || "/home";
-	
+	const from = location.state?.from?.pathname || "/home";
+
 	const handleLogin = (event) => {
 		event.preventDefault();
 
@@ -19,17 +21,27 @@ const Login = () => {
 		const email = form.email.value;
 		const password = form.password.value;
 
-        loginUser(email , password)
-        .then(res => {
-            toast("Okaeri misutā !!");
-            toast("Welcome Back !!");
-            form.reset();
-			navigate(from , {replace : true})
-        })
-        .catch(error => {
-            toast.error(error.message)
-        })
-        
+		loginUser(email, password)
+			.then((res) => {
+				toast("Okaeri misutā !!");
+				toast("Welcome Back !!");
+				form.reset();
+				navigate(from, { replace: true });
+			})
+			.catch((error) => {
+				toast.error(error.message);
+			});
+	};
+
+	const handleGoogleSignIn = () => {
+		signInWithPopup(auth , GoogleProvider)
+		.then(() => {
+			toast("You have successfully signed in with google !!");
+			navigate(from, { replace: true });
+		})
+		.catch((err) => {
+			toast.error(err.message)
+		})
 	};
 
 	return (
@@ -83,7 +95,10 @@ const Login = () => {
 				<hr />
 				<div>
 					<div className="row">
-						<div className="btn third-party-auth col-11 col-sm-6 mx-auto d-flex justify-content-center align-items-center">
+						<div
+							onClick={handleGoogleSignIn}
+							className="btn third-party-auth col-11 col-sm-6 mx-auto d-flex justify-content-center align-items-center"
+						>
 							Login with <BsGoogle className="ms-2"></BsGoogle>
 						</div>
 						<div className="btn third-party-auth col-11 col-sm-6 mx-auto d-flex justify-content-center align-items-center">

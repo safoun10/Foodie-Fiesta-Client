@@ -1,8 +1,7 @@
 import React, { useContext, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../authProvider/AuthProvider";
 import { toast } from "react-toastify";
-import { BsGithub, BsGoogle } from "react-icons/bs";
 import "./Register.css"
 
 const Register = () => {
@@ -120,25 +119,6 @@ const Register = () => {
 						</button>
 					</div>
 				</form>
-				<div className="mt-5">
-					<hr />
-					<div className="display-5 text-dance my-2 fw-bold text-center">
-						OR
-					</div>
-					<hr />
-					<div>
-						<div className="row">
-							<div className="btn third-party-auth col-11 col-sm-6 mx-auto d-flex justify-content-center align-items-center">
-								Register with <BsGoogle className="ms-2"></BsGoogle>
-							</div>
-							<div className="btn third-party-auth col-11 col-sm-6 mx-auto d-flex justify-content-center align-items-center">
-								Register with <BsGithub className="ms-2"></BsGithub>
-							</div>
-						</div>
-					</div>
-					<hr />
-				</div>
-
 				<div className="text-center mt-4 text-secondary fw-bold">
 					Already Have An Account ?
 					<Link

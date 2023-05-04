@@ -46,6 +46,8 @@ const SingleRecipe = ({ recipe }) => {
 					</div>
 				</div>
 			</div>
+			<hr className="my-4"/> 
+			<div className="w-75 title-text text-dance mx-auto fs-4 text-center">s{method}</div>
 		</div>
 	);
 };
