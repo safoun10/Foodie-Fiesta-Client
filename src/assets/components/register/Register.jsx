@@ -29,7 +29,6 @@ const Register = () => {
 				.then((res) => {
 					toast("Arigato gozaimasu !!");
 					form.reset();
-					return;
 				})
 				.catch((error) => {
 					setErr(error.message);

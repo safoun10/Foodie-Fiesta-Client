@@ -15,8 +15,8 @@ import Login from "./assets/components/login/Login";
 import Register from "./assets/components/register/Register";
 import AuthProvider from "./authProvider/AuthProvider";
 import "react-toastify/dist/ReactToastify.css";
-
 import { ToastContainer } from "react-toastify";
+import "react-tooltip/dist/react-tooltip.css";
 
 const router = createBrowserRouter([
 	{

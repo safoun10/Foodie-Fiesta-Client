@@ -1,0 +1,21 @@
+.w-500{
+    border: none;
+    border-radius: 0 !important;
+}
+.w-500:focus{
+    outline: none;
+}
+
+.w-250{
+    padding: 0 30px;
+}
+
+.footer{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.px-50{
+    padding: .5em 80px !important;
+}
