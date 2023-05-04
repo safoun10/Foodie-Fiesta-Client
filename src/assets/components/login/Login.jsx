@@ -8,7 +8,7 @@ import { getAuth, signInWithPopup } from "firebase/auth";
 
 const auth = getAuth();
 const Login = () => {
-	const { loginUser , GoogleProvider } = useContext(AuthContext);
+	const { loginUser, GoogleProvider , GithubProvider} = useContext(AuthContext);
 
 	const navigate = useNavigate();
 	const location = useLocation();
@@ -34,14 +34,24 @@ const Login = () => {
 	};
 
 	const handleGoogleSignIn = () => {
-		signInWithPopup(auth , GoogleProvider)
-		.then(() => {
-			toast("You have successfully signed in with google !!");
-			navigate(from, { replace: true });
-		})
-		.catch((err) => {
-			toast.error(err.message)
-		})
+		signInWithPopup(auth, GoogleProvider)
+			.then(() => {
+				toast("You have successfully signed in with Google !!");
+				navigate(from, { replace: true });
+			})
+			.catch((err) => {
+				toast.error(err.message);
+			});
+	};
+	const handleGithubSignIn = () => {
+		signInWithPopup(auth, GithubProvider)
+			.then(() => {
+				toast("You have successfully signed in with Github !!");
+				navigate(from, { replace: true });
+			})
+			.catch((err) => {
+				toast.error(err.message);
+			});
 	};
 
 	return (
@@ -101,7 +111,10 @@ const Login = () => {
 						>
 							Login with <BsGoogle className="ms-2"></BsGoogle>
 						</div>
-						<div className="btn third-party-auth col-11 col-sm-6 mx-auto d-flex justify-content-center align-items-center">
+						<div
+							onClick={handleGithubSignIn}
+							className="btn third-party-auth col-11 col-sm-6 mx-auto d-flex justify-content-center align-items-center"
+						>
 							Login with <BsGithub className="ms-2"></BsGithub>
 						</div>
 					</div>

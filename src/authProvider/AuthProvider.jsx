@@ -9,6 +9,7 @@ import {
 import app from "../firebase/firebase.config";
 export const AuthContext = createContext({});
 import { GoogleAuthProvider } from "firebase/auth";
+import { GithubAuthProvider } from "firebase/auth";
 
 const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
@@ -30,6 +31,7 @@ const AuthProvider = ({ children }) => {
 	};
 
 	const GoogleProvider = new GoogleAuthProvider();
+	const GithubProvider = new GithubAuthProvider();
 
 	useEffect(() => {
 		const unsubscribe = onAuthStateChanged(auth, (loggedUser) => {
@@ -42,7 +44,7 @@ const AuthProvider = ({ children }) => {
 		};
 	}, []);
 
-	const authInfo = { user, createUser, loginUser, logout, loading , GoogleProvider };
+	const authInfo = { user, createUser, loginUser, logout, loading , GoogleProvider , GithubProvider };
 	return (
 		<AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
 	);
