@@ -1,19 +1,16 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
+console.log("environment variable" , import.meta.env.VITE_PASS);
+
 const firebaseConfig = {
-    apiKey: "AIzaSyAhjvqzzvkC1zy2WR_UkrNBBL6TK6yfLSY",
-    authDomain: "foodie-fiesta-449d3.firebaseapp.com",
-    projectId: "foodie-fiesta-449d3",
-    storageBucket: "foodie-fiesta-449d3.appspot.com",
-    messagingSenderId: "791144445185",
-    appId: "1:791144445185:web:d837a0633db80278ee9700"
+    apiKey: import.meta.env.VITE_APIKEY,
+    authDomain: import.meta.env.VITE_AUTHDOMAIN,
+    projectId: import.meta.env.VITE_PROJECTID,
+    storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+    appId: import.meta.env.VITE_APPID,
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 export default app ;

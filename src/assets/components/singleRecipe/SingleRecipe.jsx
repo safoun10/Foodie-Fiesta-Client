@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SingleRecipe.css";
 import Rating from "react-rating";
 import { BsHeart, BsStar, BsStarFill } from "react-icons/bs";
@@ -6,9 +6,11 @@ import { toast } from "react-toastify";
 
 const SingleRecipe = ({ recipe }) => {
 	const { id, img, info, ingredients, method, name, rating } = recipe;
+	const [disabled, setDisabled] = useState(false);
 
     const handleFavorite = () => {
-        toast(name + " is your favorite food")
+        toast(name + " is your favorite food");
+		setDisabled(true);
     }
 
 	return (
@@ -40,7 +42,7 @@ const SingleRecipe = ({ recipe }) => {
 						<div className="fw-bold ms-2 title-text">{rating}</div>
 					</div>
 					<div>
-						<button onClick={handleFavorite} className="favorite">Favorite <BsHeart className="text-white"></BsHeart></button>
+						<button onClick={handleFavorite} disabled={disabled} className="favorite">Favorite <BsHeart className="text-white"></BsHeart></button>
 					</div>
 				</div>
 			</div>
