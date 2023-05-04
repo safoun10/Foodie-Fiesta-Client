@@ -54,7 +54,11 @@ const TopNav = () => {
 						<div>
 							<BsPersonCircle
 								data-tooltip-id="my-tooltip"
-								data-tooltip-content={user.email}
+								data-tooltip-content={
+									user
+										? user.displayName || user.email
+										: "User"
+								}
 								className="fs-2 title-text"
 							/>
 							<Tooltip id="my-tooltip" />
