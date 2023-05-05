@@ -14,7 +14,7 @@ const Blog = () => {
 	};
 
 	return (
-		<div className="pb-1">
+		<div>
 			<TopNav></TopNav>
 			<section>
 				<div>
