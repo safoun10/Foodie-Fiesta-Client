@@ -20,7 +20,7 @@ Live site link : [Foodie Fiesta](https://foodie-fiesta-449d3.web.app/home)
 - The website (*most of it*) is mobile and desktop responsive.
 - There is a blogs page that includes answers to specific questions about React That was asked in the requirements.
 - The Chef Recipe page is private and does not redirect the user to the login page upon reload.
-- ~~The chef pictures on the banner of Chef Recipes or on the six cards on the Homepage are lazy- loaded.~~
+- The chef pictures on the banner of Chef Recipes or on the six cards on the Homepage are lazy- loaded.
 - There is a button on the blog page that generates and downloads a PDF containing information about the page.
 - The website design and color selection are reasonable and meaningful (*I tried to make it but my design sense is as bad as my gpa🙂*)
 - The code is clean and organized with meaningful names.
