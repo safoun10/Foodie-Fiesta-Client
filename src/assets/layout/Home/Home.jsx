@@ -5,6 +5,7 @@ import TopNav from "../../components/topNav/TopNav";
 import MarqueeChef from "../../components/marqueeChef/MarqueeChef";
 import ChefInfo from "../../components/chefInfo/ChefInfo";
 import Footer from "../../components/footer/Footer";
+import Locations from "../../components/locations/Locations";
 
 const Home = () => {
 	return (
@@ -18,6 +19,9 @@ const Home = () => {
 			</section>
 			<section>
 				<ChefInfo></ChefInfo>
+			</section>
+			<section className="mx-auto" style={{maxWidth : "1200px"}}>
+				<Locations></Locations>
 			</section>
 			<section className="bg-footer">
 				<Footer></Footer>
