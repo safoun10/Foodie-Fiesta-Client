@@ -3,6 +3,7 @@ import { BsArrowRight, BsFillEmojiHeartEyesFill, BsHeart, BsHeartFill, BsList, B
 import "./Chef.css"
 import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazy-load';
 
 const Chef = ({chef}) => {
 
@@ -13,7 +14,9 @@ const Chef = ({chef}) => {
     return (
 		<div className="col-12 col-md-6 mx-auto chef-boxs row align-items-center w-100 card-bottom-20 py-5">
 			<div className="col-12 col-md-6 mx-auto">
-				<img className="w-100 img-chefs" src={Image} />
+				<LazyLoad className='img-fluid'>
+					<img className="w-100 img-chefs" src={Image} />
+				</LazyLoad>
 			</div>
 			<div className="col-12 col-md-6 mx-auto">
 				<div className="d-flex justify-content-between align-items-center border-bottom-20">
