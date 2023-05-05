@@ -2,12 +2,43 @@ import React from "react";
 import TopNav from "../../components/topNav/TopNav";
 import Footer from "../../components/footer/Footer";
 import "./Blog.css";
+import Pdf from "react-to-pdf";
 
+const ref = React.createRef();
 const Blog = () => {
+
+	const options = {
+		orientation: "landscape",
+		unit: "in",
+		format: [6 , 8],
+	};
+
 	return (
 		<div className="pb-1">
 			<TopNav></TopNav>
+			<section>
+				<div>
+					<Pdf
+						targetRef={ref}
+						filename="foodie-fiesta-blog.pdf"
+						options={options}
+						x={1}
+						y={1}
+						scale={.5}
+					>
+						{({ toPdf }) => (
+							<button
+								className="border-0 text-white px-2 py-2 sticky-top"
+								onClick={toPdf}
+							>
+								Download PDF File
+							</button>
+						)}
+					</Pdf>
+				</div>
+			</section>
 			<section
+				ref={ref}
 				className="mx-auto my-5 py-5"
 				style={{ maxWidth: "1200px" }}
 			>
@@ -171,14 +202,14 @@ const Blog = () => {
 						code required in each component.
 						<br />
 						<br />
-						Custom hooks are a powerful feature of
-						React that allows developers to encapsulate and reuse
-						logic across multiple components. Creating a custom hook
-						can help reduce code duplication, improve
-						maintainability, and make the codebase more modular and
-						readable. Developers can create custom hooks for a wide
-						range of use cases, making them an essential tool in the
-						React developer's toolkit.
+						Custom hooks are a powerful feature of React that allows
+						developers to encapsulate and reuse logic across
+						multiple components. Creating a custom hook can help
+						reduce code duplication, improve maintainability, and
+						make the codebase more modular and readable. Developers
+						can create custom hooks for a wide range of use cases,
+						making them an essential tool in the React developer's
+						toolkit.
 					</div>
 				</div>
 			</section>
