@@ -10,7 +10,7 @@ Live site link : [Foodie Fiesta](https://foodie-fiesta-449d3.web.app/home)
 - The footer is present on all pages and is reasonable and I tried to make it meaningful.
 - The Login page has options for email/password login, Google Sign-in, and GitHub Sign-in, as well as a link to the registration page.
 - The Registration page has fields for name, email, password, and photo URL. Errors are displayed for invalid email or password or for a password that is too short ( pass < 6 ) .
-> Empty email/password fields can't go through submission.
+> Empty email/password fields wont't go through submission.
 - The homepage includes a banner section with text and images, as well as a Chef section with at least six cards that display information about each chef, such as their picture, name, years of experience, number of recipes, likes, and a View Recipes button. There are also two additional meaningful sections on the homepage.
 - Clicking the View Recipes button redirects the user to the Chef Recipes page, which includes a banner with the chef's picture, name, bio/description, likes, number of recipes, and years of experience. The page also displays the selected chef's recipes in a card group, with information such as recipe name, ingredients, cooking method, rating, and a Favorite button. Clicking the Favorite button shows a toast message and disables the button.
 - A spinner is displayed while the data is loading. 
