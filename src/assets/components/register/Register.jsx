@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../authProvider/AuthProvider";
 import { toast } from "react-toastify";
-import "./Register.css"
+import "./Register.css";
 
 const Register = () => {
 	const { createUser } = useContext(AuthContext);
