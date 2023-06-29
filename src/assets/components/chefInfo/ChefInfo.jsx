@@ -14,11 +14,11 @@ const ChefInfo = () => {
 	return (
 		<div className="chef-info title-text">
 			<div className="text-dance display-1 text-center">
-				Our Head Chefs Are Ready to Serve You
+				Our Head Chefs are Ready to Serve you
 			</div>
 			<hr />
-			<div className="text-dance fs-4 fw-bold text-center mx-1">
-				Indulge in the exquisite creations of our esteemed head chefs,
+			<div className="text-two fs-4 fw-light text-center mx-1">
+				Indulge in the exquisite creations of our esteemed chefs,
 				who possess a wealth of culinary expertise and are poised to
 				satiate your discerning palate. Their masterful techniques and
 				use of premium ingredients will undoubtedly transport your taste

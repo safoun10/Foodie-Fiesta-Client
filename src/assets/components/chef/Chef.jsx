@@ -9,8 +9,6 @@ const Chef = ({chef}) => {
 
     const { id , name, Image, experience, recipes, likes } = chef;
 
-	// console.log(id);
-
     return (
 		<div className="col-12 col-md-6 mx-auto chef-boxs row align-items-center w-100 card-bottom-20 py-5">
 			<div className="col-12 col-md-6 mx-auto">
@@ -20,7 +18,7 @@ const Chef = ({chef}) => {
 			</div>
 			<div className="col-12 col-md-6 mx-auto">
 				<div className="d-flex justify-content-between align-items-center border-bottom-20">
-					<div className="text-dance fw-bold display-3 text-center my-2">
+					<div className="text-two fw-bold  display-3 text-center my-2">
 						{chef.name}
 					</div>
 					<div className="d-flex justify-content-center gap-2 align-items-center">
@@ -68,11 +66,8 @@ const Chef = ({chef}) => {
 					className="text-decoration-none"
 					to={`/chef-recipes/${id}`}
 				>
-					<div className="fs-4 text-center btn-chef w-100 text-dance title-text d-flex justify-content-center align-items-center ">
+					<div className="fs-4 text-center btn-chef w-100 text-two fw-bold title-text d-flex justify-content-center align-items-center ">
 						View Recipes
-						<div>
-							<BsArrowRight></BsArrowRight>
-						</div>
 					</div>
 				</Link>
 			</div>

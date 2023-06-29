@@ -17,7 +17,7 @@ const MarqueeChef = () => {
 			<div className="d-flex justify-content-between align-items-center">
 				<div className="display-4 w-50 fw-bold title-box">
 					Meet some of our <br />
-					<span className="text-dance">World Class</span>
+					<span className="text-two fw-light">World Class</span>
 					<br /> Chefs
 				</div>
 				<div className="text-dance display-1 text-center">

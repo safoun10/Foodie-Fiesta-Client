@@ -10,9 +10,9 @@ const Banner = () => {
 				style={{ maxWidth: "1200px" }}
 			>
 				<div className="col-11 col-md-8 d-flex justify-content-center align-items-center flex-column py-sm-5 py-2">
-					<div className="w-75 fw-bold mx-auto text-center display-3 pt-5 pb-4 title-text text-center text-dance">
+					<div className="w-75 mx-auto text-center display-3 pt-5 pb-4 text-two text-center text-dance">
 						" Taste the Authentic Flavors of Japanese Food with Our
-						Chef's Handcrafted Recipes"
+						Chef's Handcrafted Recipes "
 					</div>
 					<div>
 						<button className="btn btn-blog d-flex-align-items-center mt-2">
