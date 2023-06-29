@@ -33,7 +33,7 @@ const Chef = ({chef}) => {
 								}
 							></Rating>
 						</div>
-						<div className="text-dance fw-bold fs-4">{likes}</div>
+						<div className="text-two fw-bold fs-4">{likes}</div>
 					</div>
 				</div>
 				<div className="d-flex gap-2">

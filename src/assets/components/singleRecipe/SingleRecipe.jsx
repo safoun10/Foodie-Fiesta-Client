@@ -15,13 +15,13 @@ const SingleRecipe = ({ recipe }) => {
 
 	return (
 		<div className="row w-100 single-recipe my-5 d-flex justify-content-between align-items-center">
-			<div className="title-text text-dance fs-4">chef special</div>
+			<div className="title-text text-dance fs-4">Chef special</div>
 			<div className="col-5 mx-auto">
-				<div className="text-center title-text text-dance display-4">
+				<div className="text-center title-text text-two display-4">
 					{name}
 				</div>
                 <hr />
-                <div className="title-text text-center">
+                <div className="title-text text-two fw-bold text-center">
                     {info}
                 </div>
                 <hr />
@@ -47,7 +47,7 @@ const SingleRecipe = ({ recipe }) => {
 				</div>
 			</div>
 			<hr className="my-4"/> 
-			<div className="w-75 title-text text-dance mx-auto fs-4 text-center">{method}</div>
+			<div className="w-75 title-text text-two mx-auto fs-4 text-center">{method}</div>
 		</div>
 	);
 };
